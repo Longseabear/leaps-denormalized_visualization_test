@@ -1,0 +1,37 @@
+data_num = 100;
+mu1 = 10;
+sigma1 = 2;
+datas = normrnd(mu1,sigma1,data_num,2);
+
+mu2 = 2;
+sigma2 = 3;
+datas2 = normrnd(mu2,sigma2,data_num,2);
+
+hold on
+title("nomal plot")
+scatter(datas(:,1), datas(:,2),[], 'MarkerFaceColor', 'r');
+scatter(datas2(:,1), datas2(:,2),[], 'MarkerFaceColor', 'g');
+hold off
+
+figure, 
+hold on
+title("normalized plot")
+datas = normalize(datas);
+datas2 = normalize(datas2);
+scatter(datas(:,1), datas(:,2),[], 'MarkerFaceColor', 'r');
+scatter(datas2(:,1), datas2(:,2),[], 'MarkerFaceColor', 'g');
+hold off
+
+figure, 
+hold on
+title("Adaptive denormalized")
+
+denorm1 = 
+
+datas = normalize(datas);
+datas2 = normalize(datas2);
+scatter(datas(:,1), datas(:,2),[], 'MarkerFaceColor', 'r');
+scatter(datas2(:,1), datas2(:,2),[], 'MarkerFaceColor', 'g');
+hold off
+
+
